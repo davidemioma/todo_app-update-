@@ -1,0 +1,258 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-body: hsl(235, 21%, 11%);
+  --color-body-light: hsl(0, 0%, 98%);
+  --color-todo: hsl(235, 24%, 19%);
+  --color-todo-light: hsl(0, 0%, 100%);
+  --color-tick: hsl(233, 14%, 35%);
+  --color-text-tick: hsl(235, 19%, 35%);
+  --color-text: hsl(233, 14%, 35%);
+  --color-text-light: hsl(235, 19%, 35%);
+  --color-text-light-todo: hsl(233, 11%, 84%);
+  --color-text-white: hsl(0, 0%, 100%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Josefin Sans";
+  background-color: var(--color-body);
+}
+
+body.light_mode {
+  background-color: var(--color-body-light);
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 2rem 0 13rem 0;
+  background-image: url(../images/bg-mobile-dark.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header.light_mode {
+  padding: 2rem 0 13rem 0;
+  background-image: url(../images/bg-mobile-light.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.nav_logo.light_mode {
+  content: url(../images/icon-moon.svg);
+}
+
+.todo_box {
+  padding: 2rem;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.todo_box {
+  color: var(--color-text);
+  background-color: var(--color-todo);
+}
+
+.todo_box.light_mode {
+  background-color: var(--color-todo-light);
+  color: var(--color-text-light-todo);
+}
+
+.tick,
+.tick_create {
+  display: inline-flex;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  border: 1px solid var(--color-tick);
+  background: none;
+  margin-right: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.completed {
+  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.create_todo {
+  margin-bottom: 3rem;
+  border-radius: 10px;
+}
+
+.todo_input {
+  background: none;
+  border: none;
+  outline: 0;
+  color: var(--color-text);
+}
+
+.todo_list-container {
+  background-color: var(--color-todo);
+  color: var(--color-text-white);
+}
+
+.todo_list-container.light_mode {
+  background-color: var(--color-todo-light);
+  color: var(--color-text-light);
+}
+
+.info {
+  justify-content: space-between;
+}
+
+.info span {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.sorting_todo {
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.sorting_todo div {
+  display: flex;
+  gap: 2rem;
+}
+
+.sorting_todo button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+.sorting_todo button.light_mode {
+  color: var(--color-text-light-todo);
+}
+
+.sorting_todo button:hover {
+  color: hsl(220, 98%, 61%);
+}
+
+.todo_list {
+  list-style: none;
+  color: #fff;
+  background: var(--color-todo);
+}
+
+.todo_list.light_mode {
+  background: var(--color-todo-light);
+  color: var(--color-text-light);
+}
+
+.todo {
+  border-bottom: 1px solid var(--color-text-tick);
+  display: flex;
+  padding: 2rem;
+  font-size: 1.8rem;
+  transition: all 0.5s ease;
+}
+
+.todo_item {
+  align-self: center;
+}
+
+.remove_item {
+  margin-left: auto;
+  background: none;
+  border: 0;
+  outline: 0;
+}
+
+.remove_item img {
+  pointer-events: none;
+}
+
+.tick img {
+  display: none;
+  pointer-events: none;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.clear_completed {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--color-text);
+}
+
+.clear_completed.light_mode {
+  color: var(--color-text-light-todo);
+}
+
+.clear_completed.light_mode:hover {
+  color: hsl(220, 98%, 61%);
+}
+
+.clear_completed:hover {
+  color: hsl(220, 98%, 61%);
+}
+
+.todo_done span {
+  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.todo_done img {
+  display: block;
+}
+
+.todo_done {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.todo_container {
+  transform: translateY(-20%);
+}
+
+.footer p {
+  margin: -3rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--color-text);
+}
+
+.footer p.light_mode {
+  color: var(--color-text-light-todo);
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 60%;
+  }
+}

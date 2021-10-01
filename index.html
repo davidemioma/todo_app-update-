@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <script defer src="./main.js"></script>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav container">
+        <span class="nav_title">
+          <h1>todo</h1>
+        </span>
+        <img src="./images/icon-sun.svg" alt="" class="nav_logo" />
+      </nav>
+    </header>
+
+    <div class="todo_container container">
+      <div class="todo_box create_todo">
+        <span class="tick_create"></span>
+        <input
+          class="todo_input"
+          placeholder="Create a new todo..."
+          type="text"
+        />
+      </div>
+
+      <div class="todo_list-container">
+        <ul class="todo_list"></ul>
+      </div>
+
+      <div class="todo_box info">
+        <span>
+          <p class="items_left">0</p>
+          <p>items left</p>
+        </span>
+        <button value="clear" class="clear_completed">Clear Completed</button>
+      </div>
+
+      <div class="todo_box sorting_todo">
+        <div>
+          <button value="all" class="all">All</button>
+          <button value="active" class="active">Active</button>
+          <button value="completed" class="todo_completed">Completed</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Drag and drop to reorder list</p>
+    </footer>
+  </body>
+</html>

@@ -79,9 +79,15 @@ function deleteAndCheck(e) {
   //Delete Item
   if (item.classList.contains("remove_item")) {
     parent.classList.add("fall");
+
     parent.addEventListener("transitionend", function () {
       parent.remove();
     });
+
+    if (parent.classList.contains("todo_done")) {
+      itemsCompleted--;
+    }
+
     itemsLeft--;
     todoAmount.textContent = itemsLeft;
   }
@@ -112,6 +118,7 @@ function clearCompleted(e) {
 
 function filterTodo(e) {
   const allTodo = todoList.childNodes;
+  todoAmount.textContent = itemsCompleted;
 
   allTodo.forEach((td) => {
     switch (e.target.value) {

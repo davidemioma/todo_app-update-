@@ -45,10 +45,7 @@ body.light_mode {
 }
 
 .header.light_mode {
-  padding: 2rem 0 13rem 0;
   background-image: url(../images/bg-mobile-light.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .nav {
@@ -253,6 +250,14 @@ body.light_mode {
 
 @media screen and (min-width: 1024px) {
   .container {
-    width: 60%;
+    width: 50%;
+  }
+
+  .header {
+    background-image: url(../images/bg-desktop-dark.jpg);
+  }
+
+  .header.light_mode {
+    background-image: url(../images/bg-desktop-light.jpg);
   }
 }
